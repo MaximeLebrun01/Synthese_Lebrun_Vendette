@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
 
     [SerializeField] private float _speed = 1.6f;
+    [SerializeField] private GameObject _balle = default;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         MouvementJoueur();
+        Tir();
+    }
+
+    private void Tir()
+    {
+        float inputHorizontal = Input.GetAxis("Fire1");
+        float inputVertical = Input.GetAxis("Fire2");
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            Instantiate(_balle, transform.position + new Vector3(inputHorizontal, 0f, 0f), Quaternion.identity);
+        }
+
+        
     }
 
     private void MouvementJoueur()
