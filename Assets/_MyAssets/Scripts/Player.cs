@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,12 +13,15 @@ public class Player : MonoBehaviour
 
     private float _canfire = -1f;
     private float _CandenceInitial = -1f;
+    private Animator _animTop;
+    private Animator _animLeg;
 
     // Start is called before the first frame update
     void Start()
     {
         _CandenceInitial = _fireRate;
-
+        _animTop = transform.Find("PlayerTop").GetComponent<Animator>();
+        _animLeg = transform.Find("PlayerLeg").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,43 @@ public class Player : MonoBehaviour
             {
                 Instantiate(_balle, transform.position, Quaternion.identity);
             }
+
+            if (inputHorizontal == 1)
+            {
+                _animTop.SetBool("FireRight", true);
+            }
+            else
+            {
+                _animTop.SetBool("FireRight", false);
+            }
+
+            if (inputHorizontal == -1)
+            {
+                _animTop.SetBool("FireLeft", true);
+            }
+            else
+            {
+                _animTop.SetBool("FireLeft", false);
+            }
+
+            if (inputVertical == 1)
+            {
+                _animTop.SetBool("FireBack", true);
+            }
+            else
+            {
+                _animTop.SetBool("FireBack", false);
+            }
+
+            if (inputVertical == -1)
+            {
+                _animTop.SetBool("FireFace", true);
+            }
+            else
+            {
+                _animTop.SetBool("FireFace", false);
+            }
+
         }
         
     }
@@ -60,6 +101,15 @@ public class Player : MonoBehaviour
         else if (transform.position.x <= -9.5f)
         {
             transform.position = new Vector3(9.5f, transform.position.y, 0f);
+        }
+
+        if (posHorizontal != 0 || posVertical != 0)
+        {
+            _animLeg.SetBool("isRunning", true);
+        }
+        else
+        {
+            _animLeg.SetBool("isRunning", false);
         }
     }
 }

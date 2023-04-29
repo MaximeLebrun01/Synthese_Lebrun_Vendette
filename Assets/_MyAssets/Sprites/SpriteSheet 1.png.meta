@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerRight
+      name: PlayerTopRight
       rect:
         serializedVersion: 2
         x: 1392
-        y: 265
+        y: 261
         width: 59
-        height: 55
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg1
+      name: Leg_1
       rect:
         serializedVersion: 2
         x: 1392
@@ -186,12 +186,12 @@ TextureImporter:
       name: Balle
       rect:
         serializedVersion: 2
-        x: 1515
+        x: 1558
         y: 237
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,6 +199,132 @@ TextureImporter:
       bones: []
       spriteID: b09fcfc4b8a09b348ad625711872572b
       internalID: 1451228141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leg_2
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 210
+        width: 59
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f21c03e2136504780e7b48fd803e6d
+      internalID: 232837606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leg_3
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 229
+        width: 59
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07906d39352d3414d97ccb191e0071b2
+      internalID: -701277901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leg_4
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 245
+        width: 59
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d6db526a2ee2846addff7a3c5cfe9c
+      internalID: 1472656593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTopFace
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 261
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fe89c09d758e9489931f4d84fad7ec
+      internalID: 506999161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTopLeft
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 261
+        width: 66
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d81af81fea3dfe41882f540006ffd4c
+      internalID: -185316559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerTopBack
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 261
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06d488314c410d469c96148a6a53784
+      internalID: 329173719
       vertices: []
       indices: 
       edges: []
@@ -215,8 +341,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Balle: 1451228141
-      Leg1: 174971159
-      PlayerRight: 206767183
+      PlayerTopRight: 206767183
+      Leg_1: 174971159
+      Leg_2: 232837606
+      PlayerTopBack: 329173719
+      Leg_3: -701277901
+      PlayerTopFace: 506999161
+      PlayerTopLeft: -185316559
+      Leg_4: 1472656593
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
