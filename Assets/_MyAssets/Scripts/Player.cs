@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         MouvementJoueur();
         Tir();
@@ -33,54 +33,59 @@ public class Player : MonoBehaviour
 
     private void Tir()
     {
+        float inputHorizontal = Input.GetAxis("Fire1");
+        float inputVertical = Input.GetAxis("Fire2");
+        GestionFireAnim(inputHorizontal, inputVertical);
         if (Time.time > _canfire)
         {
             _canfire = Time.time + _fireRate;
-            float inputHorizontal = Input.GetAxis("Fire1");
-            float inputVertical = Input.GetAxis("Fire2");
             if (inputHorizontal != 0 || inputVertical != 0)
             {
                 Instantiate(_balle, transform.position, Quaternion.identity);
             }
 
-            if (inputHorizontal == 1)
-            {
-                _animTop.SetBool("FireRight", true);
-            }
-            else
-            {
-                _animTop.SetBool("FireRight", false);
-            }
-
-            if (inputHorizontal == -1)
-            {
-                _animTop.SetBool("FireLeft", true);
-            }
-            else
-            {
-                _animTop.SetBool("FireLeft", false);
-            }
-
-            if (inputVertical == 1)
-            {
-                _animTop.SetBool("FireBack", true);
-            }
-            else
-            {
-                _animTop.SetBool("FireBack", false);
-            }
-
-            if (inputVertical == -1)
-            {
-                _animTop.SetBool("FireFace", true);
-            }
-            else
-            {
-                _animTop.SetBool("FireFace", false);
-            }
 
         }
-        
+
+    }
+
+    private void GestionFireAnim(float inputHorizontal, float inputVertical)
+    {
+        if (inputHorizontal == 1)
+        {
+            _animTop.SetBool("FireRight", true);
+        }
+        else
+        {
+            _animTop.SetBool("FireRight", false);
+        }
+
+        if (inputHorizontal == -1)
+        {
+            _animTop.SetBool("FireLeft", true);
+        }
+        else
+        {
+            _animTop.SetBool("FireLeft", false);
+        }
+
+        if (inputVertical == 1)
+        {
+            _animTop.SetBool("FireBack", true);
+        }
+        else
+        {
+            _animTop.SetBool("FireBack", false);
+        }
+
+        if (inputVertical == -1)
+        {
+            _animTop.SetBool("FireFace", true);
+        }
+        else
+        {
+            _animTop.SetBool("FireFace", false);
+        }
     }
 
     private void MouvementJoueur()
@@ -92,16 +97,7 @@ public class Player : MonoBehaviour
 
         transform.Translate(direction * Time.deltaTime * _speed);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -4.2f, 4.2f), Mathf.Clamp(transform.position.y, -3.38f, 4.12f), 0f);
-
-        if (transform.position.x >= 9.5f)
-        {
-            transform.position = new Vector3(-9.5f, transform.position.y, 0f);
-        }
-        else if (transform.position.x <= -9.5f)
-        {
-            transform.position = new Vector3(9.5f, transform.position.y, 0f);
-        }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.7f, 3.7f), Mathf.Clamp(transform.position.y, -3.2f, 3.25f), 0f);
 
         if (posHorizontal != 0 || posVertical != 0)
         {

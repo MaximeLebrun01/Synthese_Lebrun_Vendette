@@ -329,6 +329,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Enemy1_01
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 385
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca4874ee967b954f869474f9aabaebb
+      internalID: -967599404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1_02
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 385
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe887466e8bc4446ab70f61dd2b2e1d
+      internalID: 907489385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedPU
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 12
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d42eeea0c8ac48b92ad06dee908d2
+      internalID: 1760287423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RafalePU
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 4
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338ab9eb6166ae84a988082aa7bf74bd
+      internalID: 1428118225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ViePU
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 12
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e97755b08b765b44a2d21bcb12a3cf3
+      internalID: -827098031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy1_Hit
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 449
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c76a95efc79e1f488ebf2eaa73eca51
+      internalID: -964941387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2_01
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 385
+        width: 61
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8accd253554cec5468c331e8217a4e32
+      internalID: 879253665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2_02
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 389
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b586bf267d87144b855b1a05bb16c98
+      internalID: -2007213388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy2_Hit
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 448
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2ee0ee4d852214d8984762762f5622
+      internalID: -2083417840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -340,15 +529,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Enemy2_Hit: -2083417840
+      Enemy1_02: 907489385
       Balle: 1451228141
       PlayerTopRight: 206767183
       Leg_1: 174971159
       Leg_2: 232837606
+      Enemy1_Hit: -964941387
+      RafalePU: 1428118225
       PlayerTopBack: 329173719
+      SpeedPU: 1760287423
+      Enemy2_02: -2007213388
       Leg_3: -701277901
+      Enemy1_01: -967599404
       PlayerTopFace: 506999161
       PlayerTopLeft: -185316559
       Leg_4: 1472656593
+      ViePU: -827098031
+      Enemy2_01: 879253665
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
