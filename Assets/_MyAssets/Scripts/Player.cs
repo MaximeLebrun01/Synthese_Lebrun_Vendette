@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _speed = 2f;
     [SerializeField] private GameObject _balle = default;
     [SerializeField] private float _fireRate = 0.5f;
+    [SerializeField] private GameObject _balleContainer = default;
 
     private float _canfire = -1f;
     private float _CandenceInitial = -1f;
@@ -41,7 +42,8 @@ public class Player : MonoBehaviour
             _canfire = Time.time + _fireRate;
             if (inputHorizontal != 0 || inputVertical != 0)
             {
-                Instantiate(_balle, transform.position, Quaternion.identity);
+                GameObject newBalle = Instantiate(_balle, transform.position, Quaternion.identity);
+                newBalle.transform.parent = _balleContainer.transform;
             }
 
 
