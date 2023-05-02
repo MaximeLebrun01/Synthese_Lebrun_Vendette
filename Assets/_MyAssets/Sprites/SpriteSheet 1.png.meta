@@ -396,10 +396,10 @@ TextureImporter:
       name: RafalePU
       rect:
         serializedVersion: 2
-        x: 756
+        x: 757
         y: 4
-        width: 63
-        height: 63
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -529,24 +529,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy2_Hit: -2083417840
-      Enemy1_02: 907489385
-      Balle: 1451228141
-      PlayerTopRight: 206767183
-      Leg_1: 174971159
-      Leg_2: 232837606
-      Enemy1_Hit: -964941387
-      RafalePU: 1428118225
-      PlayerTopBack: 329173719
-      SpeedPU: 1760287423
-      Enemy2_02: -2007213388
-      Leg_3: -701277901
-      Enemy1_01: -967599404
-      PlayerTopFace: 506999161
-      PlayerTopLeft: -185316559
-      Leg_4: 1472656593
-      ViePU: -827098031
-      Enemy2_01: 879253665
+      Enemy2_Hit: 1127086547
+      Enemy1_02: -668144207
+      Balle: -363420891
+      PlayerTopRight: -1350222069
+      Leg_1: -1568560243
+      Leg_2: 157797008
+      Enemy1_Hit: -1437677082
+      RafalePU: 378637315
+      PlayerTopBack: 723496627
+      SpeedPU: 1098425664
+      Enemy2_02: 452894319
+      Leg_3: -449989349
+      Enemy1_01: 325138989
+      PlayerTopFace: 585357839
+      PlayerTopLeft: -1908712065
+      Leg_4: -142303876
+      ViePU: -1195659494
+      Enemy2_01: 889660178
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
