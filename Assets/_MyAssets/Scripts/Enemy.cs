@@ -49,5 +49,8 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(_eliminationPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        SpawnManager spawnManager = FindObjectOfType<SpawnManager>();
+        spawnManager.SpawnPU(this.gameObject);
     }
+       
 }

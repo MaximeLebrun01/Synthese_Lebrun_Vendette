@@ -14,8 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _barreVie = default;
 
     private float _canfire = -1f;
-    private float _CandenceInitial = -1f;
+    private float _CandenceInitial;
     private float _ViesJoueur = 3f;
+    private float _speedInitial;
     private Animator _animTop;
     private Animator _animLeg;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _CandenceInitial = _fireRate;
+        _speedInitial = _speed;
         _animTop = transform.Find("PlayerTop").GetComponent<Animator>();
         _animLeg = transform.Find("PlayerLeg").GetComponent<Animator>();
     }
@@ -132,4 +134,27 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void PUSpeed()
+    {
+        _speed = _speedInitial * 2;
+        StartCoroutine(SpeedCoroutine());
+    }
+
+    public void PURafale()
+    {
+        _fireRate = _CandenceInitial / 4;
+        StartCoroutine(RafaleCoroutine());
+    }
+
+    IEnumerator RafaleCoroutine()
+    {
+        yield return new WaitForSeconds(12);
+        _fireRate = _CandenceInitial;
+    }
+
+    IEnumerator SpeedCoroutine()
+    {
+        yield return new WaitForSeconds(16);
+        _speed = _speedInitial;
+    }
 }

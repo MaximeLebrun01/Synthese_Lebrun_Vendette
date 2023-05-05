@@ -9,7 +9,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Vector3[] _listPositonSpawn = default;
     [SerializeField] private GameObject[] _listPrefabEnemy = default;
     [SerializeField] private GameObject _enemyContainer = default;
+    [SerializeField] private GameObject[] _listPowerUp = default;
     [SerializeField] private bool _stopSpawn = false;
+
+    private float _SpawnPU = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,15 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
+    }
+
+    public void SpawnPU(GameObject enemy)
+    {
+        if (Time.time > _SpawnPU)
+        {
+            _SpawnPU = Time.time + 10f;
+            Instantiate(_listPowerUp[Random.Range(0, _listPowerUp.Length)], enemy.transform.position, Quaternion.identity);
+        }
     }
 
     public void FinPartie()
