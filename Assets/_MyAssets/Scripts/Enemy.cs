@@ -8,19 +8,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _velocity = 50f;
     // _enemyID  0=Enemy1   1=Enemy2    
     [SerializeField] private int _enemyID = default;
-    private Transform _player;
+    [SerializeField] private GameObject _eliminationPrefab = default;
     private Rigidbody2D _rb;
+    private Player _player;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _player = FindObjectOfType<Player>().transform;
+        _player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = _player.position - transform.position;
+        Vector3 direction = _player.transform.position - transform.position;
         direction.Normalize();
         _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
     }
@@ -34,10 +35,19 @@ public class Enemy : MonoBehaviour
             DestructionEnemy();
 
         }
+        if (collision.tag == "Player")
+        {
+            _player.Damage();
+            DestructionEnemy();
+
+        }
     }
+
+
 
     private void DestructionEnemy()
     {
+        Instantiate(_eliminationPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

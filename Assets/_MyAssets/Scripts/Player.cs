@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _balle = default;
     [SerializeField] private float _fireRate = 0.5f;
     [SerializeField] private GameObject _balleContainer = default;
+    [SerializeField] private GameObject _barreVie = default;
 
     private float _canfire = -1f;
     private float _CandenceInitial = -1f;
+    private float _ViesJoueur = 3f;
     private Animator _animTop;
     private Animator _animLeg;
 
@@ -45,7 +47,6 @@ public class Player : MonoBehaviour
                 GameObject newBalle = Instantiate(_balle, transform.position, Quaternion.identity);
                 newBalle.transform.parent = _balleContainer.transform;
             }
-
 
         }
 
@@ -110,4 +111,25 @@ public class Player : MonoBehaviour
             _animLeg.SetBool("isRunning", false);
         }
     }
+
+    public void Damage()
+    {
+        _ViesJoueur -= 1f;
+        _barreVie.transform.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (_ViesJoueur * 250));
+
+        if (_ViesJoueur < 1)
+        {
+            SpawnManager spawnManager = FindObjectOfType<SpawnManager>();
+            spawnManager.FinPartie();
+            DestructionPlayer();
+
+        }
+
+    }
+
+    private void DestructionPlayer()
+    {
+        Destroy(gameObject);
+    }
+
 }

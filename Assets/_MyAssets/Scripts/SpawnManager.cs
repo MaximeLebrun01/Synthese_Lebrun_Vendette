@@ -30,4 +30,9 @@ public class SpawnManager : MonoBehaviour
         }
 
     }
+
+    public void FinPartie()
+    {
+        _stopSpawn = true;
+    }
 }

@@ -186,10 +186,10 @@ TextureImporter:
       name: Balle
       rect:
         serializedVersion: 2
-        x: 1558
-        y: 237
-        width: 20
-        height: 20
+        x: 1539
+        y: 242
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,6 +518,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Elimination_04
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 320
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f62b3dc139138c4baf5e8578202ba6d
+      internalID: -1938337815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elimination_03
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 324
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e01cf7c75c5d54aaffc860342e992f
+      internalID: -1678138519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elimination_02
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 328
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d033c6ae0bac0b46ada4f44a042d8f5
+      internalID: -241004079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elimination_01
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 336
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf56102aa48a364caac426d32192dcb
+      internalID: 1754509420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -530,6 +614,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Enemy2_Hit: 1127086547
+      Elimination_01: 1754509420
       Enemy1_02: -668144207
       Balle: -363420891
       PlayerTopRight: -1350222069
@@ -541,7 +626,10 @@ TextureImporter:
       SpeedPU: 1098425664
       Enemy2_02: 452894319
       Leg_3: -449989349
+      Elimination_03: -1678138519
+      Elimination_02: -241004079
       Enemy1_01: 325138989
+      Elimination_04: -1938337815
       PlayerTopFace: 585357839
       PlayerTopLeft: -1908712065
       Leg_4: -142303876
