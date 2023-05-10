@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _fireRate = 0.5f;
     [SerializeField] private GameObject _balleContainer = default;
     [SerializeField] private GameObject _barreVie = default;
+    [SerializeField] private float _speedPU = 1.5f;
 
     private float _canfire = -1f;
     private float _CandenceInitial;
@@ -136,7 +137,7 @@ public class Player : MonoBehaviour
 
     public void PUSpeed()
     {
-        _speed = _speedInitial * 2;
+        _speed = _speedInitial * _speedPU;
         StartCoroutine(SpeedCoroutine());
     }
 
