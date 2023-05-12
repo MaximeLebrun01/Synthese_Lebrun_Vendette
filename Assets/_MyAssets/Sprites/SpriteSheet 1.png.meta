@@ -644,6 +644,7 @@ TextureImporter:
       Leg_2: 157797008
       Enemy1_Hit: -1437677082
       RafalePU: 378637315
+      StartJeu: -446974790
       PlayerTopBack: 723496627
       SpeedPU: 1098425664
       Enemy2_02: 452894319
@@ -657,6 +658,7 @@ TextureImporter:
       Leg_4: -142303876
       ViePU: -1195659494
       Enemy2_01: 889660178
+      TitreDepart: 56384348
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -122,10 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _velocity: 50
   _enemyID: 0
+  _vie: 1
   _eliminationPrefab: {fileID: 3855174051991259604, guid: 67b37cb1250f3fe429e3ae961e83f5b0, type: 3}
-  _listPowerUp:
-  - {fileID: 7925766355170945102, guid: bf391acf8e538c34fb2837b464675411, type: 3}
-  - {fileID: 5390818047422190707, guid: a121b18334fb3f240afa718b8e4b766e, type: 3}
 --- !u!61 &3282590564114927119
 BoxCollider2D:
   m_ObjectHideFlags: 0
