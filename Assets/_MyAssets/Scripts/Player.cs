@@ -147,15 +147,33 @@ public class Player : MonoBehaviour
         StartCoroutine(RafaleCoroutine());
     }
 
+    public void PUVie()
+    {
+        if (_ViesJoueur < 3f)
+        {
+            _ViesJoueur += 1f;
+            _barreVie.transform.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (_ViesJoueur * 250));
+        }
+    }
+
     IEnumerator RafaleCoroutine()
     {
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(6);
         _fireRate = _CandenceInitial;
     }
 
     IEnumerator SpeedCoroutine()
     {
-        yield return new WaitForSeconds(16);
+        yield return new WaitForSeconds(8);
         _speed = _speedInitial;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "BalleEnnemy")
+        {
+            Destroy(collision.gameObject);
+            Damage();
+        }
     }
 }

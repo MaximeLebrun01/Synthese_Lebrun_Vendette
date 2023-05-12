@@ -10,15 +10,19 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _enemyID = default;
     [SerializeField] private int _vie = 1;
     [SerializeField] private GameObject _eliminationPrefab = default;
+    [SerializeField] private GameObject _enemyBalle= default;
     private Rigidbody2D _rb;
     private Player _player;
     private GameManager _gestionJeu;
+    private float _fireRate;
+    private float _canFire;
 
     void Start()
     {
         _gestionJeu = FindObjectOfType<GameManager>();
         _rb = GetComponent<Rigidbody2D>();
         _player = FindObjectOfType<Player>();
+        _canFire = Random.Range(0.5f, 1f);
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class Enemy : MonoBehaviour
         Vector3 direction = _player.transform.position - transform.position;
         direction.Normalize();
         _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
+        TirEnnemi();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +67,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
+    private void TirEnnemi()
+    {
+        if (_gestionJeu.Pointage > 100)
+        {
+            if (Time.time > _canFire)
+            {
+                _fireRate = Random.Range(1f, 3f);
+                _canFire = Time.time + _fireRate;
+                Instantiate(_enemyBalle, transform.position, Quaternion.identity);
+            }
+        }
+    }
 
     private void DestructionEnemy()
     {
@@ -70,6 +86,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         SpawnManager spawnManager = FindObjectOfType<SpawnManager>();
         spawnManager.SpawnPU(this.gameObject);
+        spawnManager.Kill();
     }
-       
 }

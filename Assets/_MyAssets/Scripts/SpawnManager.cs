@@ -11,8 +11,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject _enemyContainer = default;
     [SerializeField] private GameObject[] _listPowerUp = default;
     [SerializeField] private bool _stopSpawn = false;
+    [SerializeField] private float _vitesseSpawn = 2f;
 
+    Enemy _enemy;
     private float _SpawnPU = 10f;
+    private float _SpawnRate= 10f;
+    private float _nombreKill = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +30,25 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         while (!_stopSpawn)
         {
+            AugmenterVitesseSpawn();
             Vector3 posSpawn = _listPositonSpawn[Random.Range(0, _listPositonSpawn.Length)];
             GameObject newEnemy = Instantiate(_listPrefabEnemy[Random.Range(0, _listPrefabEnemy.Length)], posSpawn, Quaternion.identity);
             newEnemy.transform.parent = _enemyContainer.transform;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(_vitesseSpawn);
         }
 
+    }
+
+    private void AugmenterVitesseSpawn()
+    {
+        if (_vitesseSpawn > 0.6f)
+        {
+            if (_nombreKill >= _SpawnRate)
+            {
+                _SpawnRate += 5f;
+                _vitesseSpawn -= 0.2f;
+            }
+        }
     }
 
     public void SpawnPU(GameObject enemy)
@@ -46,5 +63,10 @@ public class SpawnManager : MonoBehaviour
     public void FinPartie()
     {
         _stopSpawn = true;
+    }
+
+    public void Kill()
+    {
+        _nombreKill++;
     }
 }

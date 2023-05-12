@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // _powerUpID 0=speed 1=rafale
+    // _powerUpID 0=speed 1=rafale 2=vie
     [SerializeField] private int _powerUpID = default;
-    Player _playerPrefab;
-
-    void Start()
-    {
-        _playerPrefab = FindObjectOfType<Player>();
-    }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,7 +25,7 @@ public class PowerUp : MonoBehaviour
                         player.PURafale();
                         break;
                     case 2:
-                        
+                        player.PUVie();
                         break;
                 }
             }

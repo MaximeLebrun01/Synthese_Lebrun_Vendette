@@ -2044,7 +2044,9 @@ MonoBehaviour:
   _listPowerUp:
   - {fileID: 7925766355170945102, guid: bf391acf8e538c34fb2837b464675411, type: 3}
   - {fileID: 5390818047422190707, guid: a121b18334fb3f240afa718b8e4b766e, type: 3}
+  - {fileID: 1203351670243937041, guid: 318c4d71d97fdf64f82ba3c31c557f7b, type: 3}
   _stopSpawn: 0
+  _vitesseSpawn: 2
 --- !u!1 &2086567432
 GameObject:
   m_ObjectHideFlags: 0
