@@ -14,31 +14,39 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D _rb;
     private Player _player;
     private GameManager _gestionJeu;
+    private SpawnManager _spawnManger;
     private float _fireRate;
     private float _canFire;
+
+    private Animator _enemyAnimator;
 
     void Start()
     {
         _gestionJeu = FindObjectOfType<GameManager>();
+        _spawnManger = FindObjectOfType<SpawnManager>();
         _rb = GetComponent<Rigidbody2D>();
         _player = FindObjectOfType<Player>();
         _canFire = Random.Range(0.5f, 1f);
+        _enemyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = _player.transform.position - transform.position;
-        direction.Normalize();
-        _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
-        TirEnnemi();
+        if (_player != null)
+        {
+            Vector3 direction = _player.transform.position - transform.position;
+            direction.Normalize();
+            _rb.velocity = direction * Time.fixedDeltaTime * _velocity;
+            TirEnnemi();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Balle")
         {
-
+            _enemyAnimator.SetTrigger("Hit");
             Destroy(collision.gameObject);
             if (_vie <= 0)
             {
