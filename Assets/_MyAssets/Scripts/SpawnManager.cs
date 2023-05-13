@@ -11,12 +11,15 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject _enemyContainer = default;
     [SerializeField] private GameObject[] _listPowerUp = default;
     [SerializeField] private bool _stopSpawn = false;
-    [SerializeField] private float _vitesseSpawn = 2f;
+    [SerializeField] private float _vitesseSpawn = 1.5f;
 
     Enemy _enemy;
     private float _SpawnPU = 10f;
-    private float _SpawnRate= 10f;
+    private float _dificulte= 10f;
     private float _nombreKill = 0;
+    private bool _ajoutVie = false;
+
+    public bool AjoutVie { get => _ajoutVie; set => _ajoutVie = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +44,20 @@ public class SpawnManager : MonoBehaviour
 
     private void AugmenterVitesseSpawn()
     {
-        if (_vitesseSpawn > 0.6f)
+        if (_vitesseSpawn > 1.1f)
         {
-            if (_nombreKill >= _SpawnRate)
+            if (_nombreKill >= _dificulte)
             {
-                _SpawnRate += 5f;
-                _vitesseSpawn -= 0.15f;
+                _dificulte += 10f;
+                _vitesseSpawn -= 0.05f;
+            }
+        }
+        else
+        {
+            if (_nombreKill >= _dificulte)
+            {
+                _dificulte += 30f;
+                _ajoutVie = true;
             }
         }
     }
@@ -55,7 +66,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (Time.time > _SpawnPU)
         {
-            _SpawnPU = Time.time + 10f;
+            _SpawnPU = Time.time + Random.Range(8f, 15f);
             Instantiate(_listPowerUp[Random.Range(0, _listPowerUp.Length)], enemy.transform.position, Quaternion.identity);
         }
     }

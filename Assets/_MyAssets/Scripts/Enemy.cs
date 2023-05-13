@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
 
     private Animator _enemyAnimator;
 
+    public int Vie { get => _vie; set => _vie = value; }
+
     void Start()
     {
         _gestionJeu = FindObjectOfType<GameManager>();
@@ -28,6 +30,8 @@ public class Enemy : MonoBehaviour
         _player = FindObjectOfType<Player>();
         _canFire = Random.Range(0.5f, 1f);
         _enemyAnimator = GetComponent<Animator>();
+        if (_spawnManger.AjoutVie)
+            _vie++;
     }
 
     // Update is called once per frame
@@ -46,7 +50,6 @@ public class Enemy : MonoBehaviour
     {
         if (collision.tag == "Balle")
         {
-            _enemyAnimator.SetTrigger("Hit");
             Destroy(collision.gameObject);
             if (_vie <= 0)
             {
@@ -65,6 +68,7 @@ public class Enemy : MonoBehaviour
                 _vie--;
             }
 
+            _enemyAnimator.SetTrigger("Hit");
 
         }
         if (collision.tag == "Player")
@@ -92,8 +96,7 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(_eliminationPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        SpawnManager spawnManager = FindObjectOfType<SpawnManager>();
-        spawnManager.SpawnPU(this.gameObject);
-        spawnManager.Kill();
+        _spawnManger.SpawnPU(this.gameObject);
+        _spawnManger.Kill();
     }
 }

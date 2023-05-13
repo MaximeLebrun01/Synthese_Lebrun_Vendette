@@ -602,6 +602,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BalleEnemy
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 226
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed384d27c08dfe4383d0e18bac40a32
+      internalID: 763967865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3_01
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 384
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d275cf70ebf7e6647b74d70aa5b0f20f
+      internalID: 1790616150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3_02
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 384
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56da74405627a98489387bb24cf66e16
+      internalID: -586267720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3_Hit
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 447
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5895074c649ba24393a2c73b8609479
+      internalID: 1363490364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -619,11 +703,13 @@ TextureImporter:
       Enemy1_02: -668144207
       Balle: -363420891
       PlayerTopRight: -1350222069
+      BalleEnemy: 763967865
       Leg_1: -1568560243
       Leg_2: 157797008
       Enemy1_Hit: -1437677082
       RafalePU: 378637315
       StartJeu: -446974790
+      Enemy3_Hit: 1363490364
       PlayerTopBack: 723496627
       SpeedPU: 1098425664
       Enemy2_02: 452894319
@@ -631,8 +717,10 @@ TextureImporter:
       Elimination_03: -1678138519
       Elimination_02: -241004079
       Enemy1_01: 325138989
+      Enemy3_02: -586267720
       Elimination_04: -1938337815
       PlayerTopFace: 585357839
+      Enemy3_01: 1790616150
       PlayerTopLeft: -1908712065
       Leg_4: -142303876
       ViePU: -1195659494
