@@ -9,31 +9,52 @@ public class Balle : MonoBehaviour
     float inputHorizontal;
     float inputVertical;
     Player _player;
+    Vector3 _playerPos;
+    Vector3 _enemyPos;
 
     [SerializeField] private float _vitesse = 5f;
-    [SerializeField] private string _nom = default;
     // Start is called before the first frame update
     void Start()
     {
         _player = FindObjectOfType<Player>();
         inputHorizontal = Input.GetAxis("Fire1");
         inputVertical = Input.GetAxis("Fire2");
+        _playerPos = _player.transform.position;
+        _enemyPos = transform.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_nom == "Player")
+        if (gameObject.tag == "Balle")
         {
-            LaserJoueur();
+            TirJoueur();
         }
-        else
+        else if (gameObject.tag == "BalleEnemy")
         {
-            Vector3 direction = _player.transform.position ;
-            transform.Translate(direction * Time.deltaTime * _vitesse);
+            TirEnemy();
         }
 
         DestructionGameObject();
+    }
+
+
+
+    private void TirEnemy()
+    {
+        Vector3 direction = _playerPos - _enemyPos;
+        direction.Normalize();
+        transform.Translate(direction * Time.deltaTime * _vitesse);
+    }
+
+    private void TirJoueur()
+    {
+        if (inputHorizontal != 0 || inputVertical != 0)
+        {
+            transform.Translate(new Vector3(inputHorizontal, inputVertical, 0f) * Time.deltaTime * _vitesse);
+
+        }
     }
 
     private void DestructionGameObject()
@@ -56,12 +77,5 @@ public class Balle : MonoBehaviour
         }
     }
 
-    private void LaserJoueur()
-    {
-        if (inputHorizontal != 0 || inputVertical != 0)
-        {
-            transform.Translate(new Vector3(inputHorizontal, inputVertical, 0f) * Time.deltaTime * _vitesse);
 
-        }
-    }
 }

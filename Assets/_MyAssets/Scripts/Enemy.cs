@@ -69,11 +69,11 @@ public class Enemy : MonoBehaviour
 
     private void TirEnnemi()
     {
-        if (_gestionJeu.Pointage > 100)
+        if (_gestionJeu.Pointage > 100 && _enemyID == 1)
         {
             if (Time.time > _canFire)
             {
-                _fireRate = Random.Range(1f, 3f);
+                _fireRate = Random.Range(2f, 5f);
                 _canFire = Time.time + _fireRate;
                 Instantiate(_enemyBalle, transform.position, Quaternion.identity);
             }

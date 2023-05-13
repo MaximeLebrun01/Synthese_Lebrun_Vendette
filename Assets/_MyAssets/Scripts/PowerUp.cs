@@ -7,6 +7,11 @@ public class PowerUp : MonoBehaviour
     // _powerUpID 0=speed 1=rafale 2=vie
     [SerializeField] private int _powerUpID = default;
 
+    void Start()
+    {
+        Destroy(gameObject, 10f);
+    }
+
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {

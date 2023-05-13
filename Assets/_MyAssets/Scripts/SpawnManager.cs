@@ -46,7 +46,7 @@ public class SpawnManager : MonoBehaviour
             if (_nombreKill >= _SpawnRate)
             {
                 _SpawnRate += 5f;
-                _vitesseSpawn -= 0.2f;
+                _vitesseSpawn -= 0.15f;
             }
         }
     }

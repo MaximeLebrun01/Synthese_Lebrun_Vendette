@@ -170,7 +170,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "BalleEnnemy")
+        if(collision.tag == "BalleEnemy")
         {
             Destroy(collision.gameObject);
             Damage();
