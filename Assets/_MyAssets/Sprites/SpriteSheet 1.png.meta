@@ -674,7 +674,7 @@ TextureImporter:
         width: 60
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -682,6 +682,69 @@ TextureImporter:
       bones: []
       spriteID: c5895074c649ba24393a2c73b8609479
       internalID: 1363490364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key_Fire
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 599
+        width: 113
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fef15d9d3cba64984063bbfb2f9110
+      internalID: 1756723356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key_Move
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 599
+        width: 112
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731c7c7e138f6ac4ab92d217a4955e0a
+      internalID: 1435064738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hello
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 194
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d19c45b0d5cdb245a668577f3cdd439
+      internalID: 1623411318
       vertices: []
       indices: 
       edges: []
@@ -697,6 +760,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TitreDepart: 56384348
       caseObjet: 250865335
       Enemy2_Hit: 1127086547
       Elimination_01: 1754509420
@@ -715,6 +779,8 @@ TextureImporter:
       Enemy2_02: 452894319
       Leg_3: -449989349
       Elimination_03: -1678138519
+      Key_Move: 1435064738
+      Key_Fire: 1756723356
       Elimination_02: -241004079
       Enemy1_01: 325138989
       Enemy3_02: -586267720
@@ -725,7 +791,7 @@ TextureImporter:
       Leg_4: -142303876
       ViePU: -1195659494
       Enemy2_01: 889660178
-      TitreDepart: 56384348
+      Hello: 1623411318
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
