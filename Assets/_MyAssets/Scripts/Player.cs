@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -133,6 +134,7 @@ public class Player : MonoBehaviour
     private void DestructionPlayer()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene(2);
     }
 
     public void PUSpeed()

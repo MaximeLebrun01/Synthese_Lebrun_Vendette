@@ -123,18 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &627337890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1248351630375504656, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
-  m_PrefabInstance: {fileID: 1248351631527087893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53cbdf6648520fa45bf26dc9795045e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &919211181
+--- !u!1 &1680885275
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +131,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 919211184}
-  - component: {fileID: 919211183}
-  - component: {fileID: 919211182}
+  - component: {fileID: 1680885278}
+  - component: {fileID: 1680885277}
+  - component: {fileID: 1680885276}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -152,25 +141,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &919211182
+--- !u!81 &1680885276
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919211181}
+  m_GameObject: {fileID: 1680885275}
   m_Enabled: 1
---- !u!20 &919211183
+--- !u!20 &1680885277
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919211181}
+  m_GameObject: {fileID: 1680885275}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -203,13 +192,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &919211184
+--- !u!4 &1680885278
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919211181}
+  m_GameObject: {fileID: 1680885275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -218,13 +207,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1248351631527087893
+--- !u!1001 &1822074094
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1822074095}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GestionScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1006276254395190782, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1006276255509463943, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Jouer
@@ -240,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 1006276256359750928, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 627337890}
+      objectReference: {fileID: 1822074095}
     - target: {fileID: 1006276256359750928, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -305,13 +322,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 1248351631736280440, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1300
+    - target: {fileID: 1248351631736280441, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_Name
+      value: FinText
       objectReference: {fileID: 0}
     - target: {fileID: 1248351631736280443, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
       propertyPath: m_text
-      value: Aventure du Roi des Prairies
+      value: Fin de partie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999063812271246956, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_text
+      value: Rejouer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999063813372739605, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+      propertyPath: m_text
+      value: Menu Principale
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+--- !u!114 &1822074095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1248351630375504656, guid: efc3df3177d18b6419e6c2566e0129c3, type: 3}
+  m_PrefabInstance: {fileID: 1822074094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cbdf6648520fa45bf26dc9795045e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
