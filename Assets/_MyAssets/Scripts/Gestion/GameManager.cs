@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,17 +12,11 @@ public class GameManager : MonoBehaviour
     public int Pointage { get => _pointage; set => _pointage = value; }
     public float Temps { get => _temps; set => _temps = value; }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void FinPartie()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PlayerPrefs.SetInt("pts", Pointage);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(2);
     }
 
     // Méthodes public
@@ -31,4 +26,6 @@ public class GameManager : MonoBehaviour
         UIManager uiManager = FindObjectOfType<UIManager>();
         uiManager.ChangerPointage(Pointage);
     }
+
+
 }

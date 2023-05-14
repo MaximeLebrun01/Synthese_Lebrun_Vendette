@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
 
 
     [SerializeField] private float _speed = 2f;
-    [SerializeField] private GameObject _balle = default;
     [SerializeField] private float _fireRate = 0.5f;
+    [SerializeField] private float _speedPU = 1.5f;
+    [SerializeField] private GameObject _balle = default;
     [SerializeField] private GameObject _balleContainer = default;
     [SerializeField] private GameObject _barreVie = default;
-    [SerializeField] private float _speedPU = 1.5f;
 
     private float _canfire = -1f;
     private float _CandenceInitial;
@@ -21,10 +21,12 @@ public class Player : MonoBehaviour
     private float _speedInitial;
     private Animator _animTop;
     private Animator _animLeg;
+    private GameManager _gestionJeu;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gestionJeu = FindObjectOfType<GameManager>();
         _CandenceInitial = _fireRate;
         _speedInitial = _speed;
         _animTop = transform.Find("PlayerTop").GetComponent<Animator>();
@@ -126,7 +128,7 @@ public class Player : MonoBehaviour
             SpawnManager spawnManager = FindObjectOfType<SpawnManager>();
             spawnManager.FinPartie();
             DestructionPlayer();
-
+            _gestionJeu.FinPartie();
         }
 
     }
@@ -134,7 +136,6 @@ public class Player : MonoBehaviour
     private void DestructionPlayer()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(2);
     }
 
     public void PUSpeed()

@@ -6,16 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _txtPts = default;
-    [SerializeField] private TMP_Text _txtTemps = default;
+    [SerializeField] private TextMeshProUGUI _txtPts = default;
+    [SerializeField] private TextMeshProUGUI _txtTemps = default;
     [SerializeField] private GameObject _menuPause = default;
     [SerializeField] private bool _enPause;
-    private GameManager _gestionJeu;
 
 
     void Start()
     {
-        _gestionJeu = FindObjectOfType<GameManager>();
         EnleverPause();
         _txtPts.text = "0 Pts";
     }
