@@ -516,7 +516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Utiliser les touches pr\xE9c\xE9dentes afin de bouger et tirer les ennemis
+  m_text: "Utilisez les touches pr\xE9c\xE9dentes afin de bouger et tirer les ennemis
     qui apparaissent"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d1faebf83118f34f9cb69f8e74d0899, type: 2}

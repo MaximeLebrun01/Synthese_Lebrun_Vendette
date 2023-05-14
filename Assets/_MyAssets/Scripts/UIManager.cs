@@ -9,14 +9,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text _txtPts = default;
     [SerializeField] private TMP_Text _txtTemps = default;
     [SerializeField] private GameObject _menuPause = default;
-    private bool _enPause;
+    [SerializeField] private bool _enPause;
     private GameManager _gestionJeu;
 
 
     void Start()
     {
         _gestionJeu = FindObjectOfType<GameManager>();
-        _enPause = false;
+        EnleverPause();
         _txtPts.text = "0 Pts";
     }
 
