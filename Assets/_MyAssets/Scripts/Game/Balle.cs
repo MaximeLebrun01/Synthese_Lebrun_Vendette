@@ -20,7 +20,6 @@ public class Balle : MonoBehaviour
         inputVertical = Input.GetAxis("Fire2");
         _playerPos = _player.transform.position;
         _enemyPos = transform.position;
-
     }
 
     // Update is called once per frame

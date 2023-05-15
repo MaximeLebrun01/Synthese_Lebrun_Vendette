@@ -11,7 +11,7 @@ public class GestionFin : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _txtBestPts = default;
     [SerializeField] private GameObject _displayBestPts = default;
     [SerializeField] private GameObject _inputNom = default;
-    [SerializeField] private Text _inputText = default;
+    [SerializeField] private TextMeshProUGUI _inputText = default;
 
     private int _pts;
     private int _bestPts;
@@ -36,18 +36,24 @@ public class GestionFin : MonoBehaviour
         else
         {
             _displayBestPts.SetActive(true);
-
-            _bestPts = PlayerPrefs.GetInt("_bestPts");
-            _nom = PlayerPrefs.GetString("nom");
-            _txtBestPts.text = _nom.ToString() + " :" + _bestPts.ToString() + " pts";
+            ValeurBestPts();
         }
 
 
     }
 
+    private void ValeurBestPts()
+    {
+        _bestPts = PlayerPrefs.GetInt("_bestPts");
+        _nom = PlayerPrefs.GetString("nom");
+        _txtBestPts.text = _nom.ToString() + " : " + _bestPts.ToString() + "pts";
+        DisplayBestPts();
+    }
+
     public void DisplayBestPts()
     {
         _displayBestPts.SetActive(true);
+        _inputNom.SetActive(false);
     }
 
     public void InputNom()
@@ -60,6 +66,7 @@ public class GestionFin : MonoBehaviour
     {
         PlayerPrefs.SetString("nom", _inputText.text);
         PlayerPrefs.Save();
+        ValeurBestPts();
     }
 
 
