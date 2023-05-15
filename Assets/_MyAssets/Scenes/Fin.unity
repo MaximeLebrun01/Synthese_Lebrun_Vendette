@@ -1042,7 +1042,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1248351631927767040}
         m_TargetAssemblyTypeName: GestionFin, Assembly-CSharp
-        m_MethodName: DisplayBestPts
+        m_MethodName: NomPlayerPref
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2186,7 +2186,7 @@ MonoBehaviour:
   _txtBestPts: {fileID: 1919640058}
   _displayBestPts: {fileID: 161460538}
   _inputNom: {fileID: 257837785}
-  _inputText: {fileID: 0}
+  _inputText: {fileID: 855547549}
 --- !u!222 &1721157661446977371
 CanvasRenderer:
   m_ObjectHideFlags: 0
