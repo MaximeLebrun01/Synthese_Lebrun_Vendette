@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _balle = default;
     [SerializeField] private GameObject _balleContainer = default;
     [SerializeField] private GameObject _barreVie = default;
+    [SerializeField] private AudioClip _balleSound = default;
+    [SerializeField] private AudioClip _footSound = default;
 
     private float _canfire = -1f;
     private float _CandenceInitial;
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
             _canfire = Time.time + _fireRate;
             if (inputHorizontal != 0 || inputVertical != 0)
             {
+                AudioSource.PlayClipAtPoint(_balleSound, Camera.main.transform.position, 0.3f);
                 GameObject newBalle = Instantiate(_balle, transform.position, Quaternion.identity);
                 newBalle.transform.parent = _balleContainer.transform;
             }

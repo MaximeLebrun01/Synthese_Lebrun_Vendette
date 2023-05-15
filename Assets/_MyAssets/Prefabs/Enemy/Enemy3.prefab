@@ -125,6 +125,7 @@ MonoBehaviour:
   _vie: 2
   _eliminationPrefab: {fileID: 3855174051991259604, guid: 67b37cb1250f3fe429e3ae961e83f5b0, type: 3}
   _enemyBalle: {fileID: 0}
+  _deadSound: {fileID: 8300000, guid: 5f0fb79c52369d2489186ec92316ee38, type: 3}
 --- !u!50 &6927925459188003333
 Rigidbody2D:
   serializedVersion: 4

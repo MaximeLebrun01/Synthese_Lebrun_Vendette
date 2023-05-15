@@ -514,11 +514,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  _balle: {fileID: 5099514882772716136, guid: 47e4ba682535ced43b15a6d487929814, type: 3}
   _fireRate: 0.3
+  _speedPU: 1.4
+  _balle: {fileID: 5099514882772716136, guid: 47e4ba682535ced43b15a6d487929814, type: 3}
   _balleContainer: {fileID: 35157121}
   _barreVie: {fileID: 1285550203}
-  _speedPU: 1.4
+  _balleSound: {fileID: 8300000, guid: 8e9850e40a6fb8841ba4a2cc31e20161, type: 3}
+  _footSound: {fileID: 8300000, guid: 6845bb58267cd8346bb13c709a66127f, type: 3}
 --- !u!4 &271818509
 Transform:
   m_ObjectHideFlags: 0
@@ -1207,6 +1209,7 @@ MonoBehaviour:
   _txtPts: {fileID: 285764642}
   _txtTemps: {fileID: 1403628435}
   _menuPause: {fileID: 1642856146}
+  _enPause: 0
 --- !u!114 &888288970
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
             if (_vie <= 0)
             {
                 DestructionEnemy();
-                switch(_enemyID)
+                switch (_enemyID)
                 {
                     case 0:{ _gestionJeu.AugmenterPointage(10); } break;
                     case 1:{ _gestionJeu.AugmenterPointage(20); } break;
