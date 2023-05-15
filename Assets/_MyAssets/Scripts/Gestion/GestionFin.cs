@@ -25,7 +25,7 @@ public class GestionFin : MonoBehaviour
         _displayBestPts.SetActive(false);
 
         _pts = PlayerPrefs.GetInt("pts");
-        _txtPts.text =_pts.ToString() + " pts";
+        _txtPts.text =_pts.ToString() + "pts";
 
         if (_pts > PlayerPrefs.GetInt("_bestPts",0))
         {
