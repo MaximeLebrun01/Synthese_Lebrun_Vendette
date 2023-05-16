@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // _powerUpID 0=speed 1=rafale 2=vie
+    // _powerUpID 0=speed 1=rafale 2=vie 3=ChangeControl
     [SerializeField] private int _powerUpID = default;
 
     void Start()
@@ -31,6 +31,9 @@ public class PowerUp : MonoBehaviour
                         break;
                     case 2:
                         player.PUVie();
+                        break;
+                    case 3:
+                        player.PURandom();
                         break;
                 }
             }
