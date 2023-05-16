@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _fireRate = 0.5f;
-    [SerializeField] private float _footstepRate = 0.1f;
+    [SerializeField] private float _footstepRate = 0.3f;
     [SerializeField] private float _speedPU = 1.5f;
     [SerializeField] private GameObject _balle = default;
     [SerializeField] private GameObject _balleContainer = default;

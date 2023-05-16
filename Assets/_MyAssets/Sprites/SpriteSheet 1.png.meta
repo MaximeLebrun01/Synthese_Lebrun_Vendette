@@ -758,7 +758,7 @@ TextureImporter:
         width: 56
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -779,7 +779,7 @@ TextureImporter:
         width: 56
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -787,6 +787,27 @@ TextureImporter:
       bones: []
       spriteID: f204a927bb968824c80abd5e94464237
       internalID: -21975251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confusion
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 637
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac38952f43e4ef469bd9459d4abe373
+      internalID: 1876500062
       vertices: []
       indices: 
       edges: []
@@ -802,7 +823,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hello: 1623411318
+      TitreDepart: 56384348
       caseObjet: 250865335
       Enemy2_Hit: 1127086547
       Elimination_01: 1754509420
@@ -813,6 +834,7 @@ TextureImporter:
       Leg_1: -1568560243
       Leg_2: 157797008
       Enemy1_Hit: -1437677082
+      Confusion: 1876500062
       RafalePU: 378637315
       Muted: 1127816948
       StartJeu: -446974790
@@ -835,7 +857,7 @@ TextureImporter:
       Leg_4: -142303876
       ViePU: -1195659494
       Enemy2_01: 889660178
-      TitreDepart: 56384348
+      Hello: 1623411318
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
