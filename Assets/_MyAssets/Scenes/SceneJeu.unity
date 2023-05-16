@@ -519,6 +519,7 @@ MonoBehaviour:
   _footstepRate: 0.3
   _speedPU: 1.4
   _balle: {fileID: 5099514882772716136, guid: 47e4ba682535ced43b15a6d487929814, type: 3}
+  _randomBalle: {fileID: 638337487069409373, guid: d0c85d4c8daa45142b22a93db17567c1, type: 3}
   _balleContainer: {fileID: 35157121}
   _barreVie: {fileID: 1285550203}
   _balleSound: {fileID: 8300000, guid: 8e9850e40a6fb8841ba4a2cc31e20161, type: 3}
@@ -2939,6 +2940,7 @@ MonoBehaviour:
   - {fileID: 7925766355170945102, guid: bf391acf8e538c34fb2837b464675411, type: 3}
   - {fileID: 5390818047422190707, guid: a121b18334fb3f240afa718b8e4b766e, type: 3}
   - {fileID: 1203351670243937041, guid: 318c4d71d97fdf64f82ba3c31c557f7b, type: 3}
+  - {fileID: 29883740059515613, guid: fb07250e4452fee488c702311f194395, type: 3}
   _stopSpawn: 0
   _vitesseSpawn: 1.5
 --- !u!1 &2086567432
