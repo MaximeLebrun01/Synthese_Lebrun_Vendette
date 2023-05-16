@@ -816,13 +816,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shotgun
+      name: Confusion
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 4
-        width: 64
-        height: 59
+        x: 359
+        y: 637
+        width: 39
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -830,8 +830,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1cbd8ac07d2d38488166b473b6d217c
-      internalID: -1841752848
+      spriteID: aac38952f43e4ef469bd9459d4abe373
+      internalID: 1876500062
       vertices: []
       indices: 
       edges: []
@@ -858,6 +858,7 @@ TextureImporter:
       Leg_1: -1568560243
       Leg_2: 157797008
       Enemy1_Hit: -1437677082
+      Confusion: 1876500062
       RafalePU: 378637315
       Muted: 1127816948
       StartJeu: -446974790

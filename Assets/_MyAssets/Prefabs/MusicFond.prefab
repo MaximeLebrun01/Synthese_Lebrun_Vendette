@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2507461844974369550}
   - component: {fileID: 2507461844974369545}
+  - component: {fileID: 8298032277545125421}
   m_Layer: 0
   m_Name: MusicFond
   m_TagString: Untagged
@@ -128,3 +129,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8298032277545125421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507461844974369544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9e23303e7cfd84ba80852f06506b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
