@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _fireRate = 0.5f;
+    [SerializeField] private float _footstepRate = 0.1f;
     [SerializeField] private float _speedPU = 1.5f;
     [SerializeField] private GameObject _balle = default;
     [SerializeField] private GameObject _balleContainer = default;
@@ -19,11 +20,13 @@ public class Player : MonoBehaviour
 
     private float _canfire = -1f;
     private float _CandenceInitial;
+    private float _canFootSound = -1f;
     private float _ViesJoueur = 3f;
     private float _speedInitial;
     private Animator _animTop;
     private Animator _animLeg;
     private GameManager _gestionJeu;
+
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +62,33 @@ public class Player : MonoBehaviour
 
         }
 
+    }
+
+    private void MouvementJoueur()
+    {
+        float posHorizontal = Input.GetAxis("Horizontal");
+        float posVertical = Input.GetAxis("Vertical");
+
+        Vector3 direction = new Vector3(posHorizontal, posVertical, 0f);
+
+        transform.Translate(direction * Time.deltaTime * _speed);
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.7f, 3.7f), Mathf.Clamp(transform.position.y, -3.2f, 3.25f), 0f);
+
+        if (posHorizontal != 0 || posVertical != 0)
+        {
+            _animLeg.SetBool("isRunning", true);
+            if (Time.time > _canFootSound)
+            {
+                _canFootSound = Time.time + _footstepRate;
+                AudioSource.PlayClipAtPoint(_footSound, Camera.main.transform.position, 0.3f);
+
+            }
+        }
+        else
+        {
+            _animLeg.SetBool("isRunning", false);
+        }
     }
 
     private void GestionFireAnim(float inputHorizontal, float inputVertical)
@@ -97,27 +127,6 @@ public class Player : MonoBehaviour
         else
         {
             _animTop.SetBool("FireFace", false);
-        }
-    }
-
-    private void MouvementJoueur()
-    {
-        float posHorizontal = Input.GetAxis("Horizontal");
-        float posVertical = Input.GetAxis("Vertical");
-
-        Vector3 direction = new Vector3(posHorizontal, posVertical, 0f);
-
-        transform.Translate(direction * Time.deltaTime * _speed);
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3.7f, 3.7f), Mathf.Clamp(transform.position.y, -3.2f, 3.25f), 0f);
-
-        if (posHorizontal != 0 || posVertical != 0)
-        {
-            _animLeg.SetBool("isRunning", true);
-        }
-        else
-        {
-            _animLeg.SetBool("isRunning", false);
         }
     }
 
