@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _footstepRate = 0.1f;
     [SerializeField] private float _speedPU = 1.5f;
     [SerializeField] private GameObject _balle = default;
+    [SerializeField] private GameObject _randomBalle = default;
     [SerializeField] private GameObject _balleContainer = default;
     [SerializeField] private GameObject _barreVie = default;
     [SerializeField] private AudioClip _balleSound = default;
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     private float _canFootSound = -1f;
     private float _ViesJoueur = 3f;
     private float _speedInitial;
+    private bool _isRandom = false;
     private Animator _animTop;
     private Animator _animLeg;
     private GameManager _gestionJeu;
@@ -50,14 +51,31 @@ public class Player : MonoBehaviour
         float inputHorizontal = Input.GetAxis("Fire1");
         float inputVertical = Input.GetAxis("Fire2");
         GestionFireAnim(inputHorizontal, inputVertical);
+        if (_isRandom && (inputHorizontal != 0 || inputVertical != 0))
+        {
+            inputHorizontal = Random.Range(-1, 1);
+            inputVertical = Random.Range(-1, 1);
+        }
+
         if (Time.time > _canfire)
         {
             _canfire = Time.time + _fireRate;
             if (inputHorizontal != 0 || inputVertical != 0)
             {
                 AudioSource.PlayClipAtPoint(_balleSound, Camera.main.transform.position, 0.3f);
-                GameObject newBalle = Instantiate(_balle, transform.position, Quaternion.identity);
-                newBalle.transform.parent = _balleContainer.transform;
+                if(!_isRandom)
+                {
+                    GameObject newBalle = Instantiate(_balle, transform.position, Quaternion.identity);
+                    newBalle.transform.parent = _balleContainer.transform;
+                }
+                else
+                {
+                    int randomVal = Random.Range(0, 180);
+                    Vector3 spread = new Vector3(0, 0, randomVal - 90);
+                    GameObject newBalle = Instantiate(_randomBalle, transform.position, Quaternion.Euler(transform.rotation.eulerAngles + spread));
+                    newBalle.transform.parent = _balleContainer.transform;
+                }
+                
             }
 
         }
@@ -169,6 +187,18 @@ public class Player : MonoBehaviour
             _ViesJoueur += 1f;
             _barreVie.transform.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, (_ViesJoueur * 250));
         }
+    }
+
+    public void PURandom()
+    {
+        _isRandom = true;
+        StartCoroutine(PURandomCoroutine());
+    }
+
+    IEnumerator PURandomCoroutine()
+    {
+        yield return new WaitForSeconds(8);
+        _isRandom = false;
     }
 
     IEnumerator RafaleCoroutine()
