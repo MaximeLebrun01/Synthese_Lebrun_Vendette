@@ -21,6 +21,10 @@ public class GestionMusiqueFond : MonoBehaviour
             _btnMutePrefab.GetComponent<Image>().sprite = _muted;
             _audioSource.Stop();
         }
+        else
+        {
+            _btnMutePrefab.GetComponent<Image>().sprite = _notMuted;
+        }
 
     }
 

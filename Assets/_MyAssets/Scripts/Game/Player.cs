@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     private Animator _animLeg;
     private GameManager _gestionJeu;
 
+    public bool IsRandom { get => _isRandom; set => _isRandom = value; }
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,12 +52,6 @@ public class Player : MonoBehaviour
     {
         float inputHorizontal = Input.GetAxis("Fire1");
         float inputVertical = Input.GetAxis("Fire2");
-        GestionFireAnim(inputHorizontal, inputVertical);
-        if (_isRandom && (inputHorizontal != 0 || inputVertical != 0))
-        {
-            inputHorizontal = Random.Range(-1, 1);
-            inputVertical = Random.Range(-1, 1);
-        }
 
         if (Time.time > _canfire)
         {
@@ -70,9 +66,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    int randomVal = Random.Range(0, 180);
-                    Vector3 spread = new Vector3(0, 0, randomVal - 90);
-                    GameObject newBalle = Instantiate(_randomBalle, transform.position, Quaternion.Euler(transform.rotation.eulerAngles + spread));
+                    GameObject newBalle = Instantiate(_randomBalle, transform.position, Quaternion.identity);
                     newBalle.transform.parent = _balleContainer.transform;
                 }
                 
@@ -192,6 +186,8 @@ public class Player : MonoBehaviour
     public void PURandom()
     {
         _isRandom = true;
+        _fireRate = _CandenceInitial / 2;
+
         StartCoroutine(PURandomCoroutine());
     }
 
@@ -199,6 +195,8 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(8);
         _isRandom = false;
+        _fireRate = _CandenceInitial;
+
     }
 
     IEnumerator RafaleCoroutine()

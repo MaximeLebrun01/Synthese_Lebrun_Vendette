@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 29883740059515615}
   - component: {fileID: 29883740059515614}
   m_Layer: 0
-  m_Name: Shotgun
+  m_Name: RandomPU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29883740059515613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9554503, y: 0.002292037, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.0337, y: 0.0624, z: 0}
+  m_LocalScale: {x: 1.4011, y: 1.293, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1841752848, guid: c8b2e87a0282fe647ac6af1818a1122b, type: 3}
+  m_Sprite: {fileID: 1876500062, guid: c8b2e87a0282fe647ac6af1818a1122b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.59}
+  m_Size: {x: 0.39, y: 0.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,18 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0008834228, y: -0.004904568}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.59}
-    newSize: {x: 0.64, y: 0.59}
+    oldSize: {x: 0.39, y: 0.41}
+    newSize: {x: 0.39, y: 0.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.59}
+  m_Size: {x: 0.42268378, y: 0.43851715}
   m_EdgeRadius: 0
 --- !u!50 &29883740059515615
 Rigidbody2D:
