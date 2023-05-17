@@ -816,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Confusion
+      name: RandomPU
       rect:
         serializedVersion: 2
         x: 359
@@ -824,7 +824,7 @@ TextureImporter:
         width: 39
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -847,18 +847,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TitreDepart: 56384348
+      Hello: 1623411318
       caseObjet: 250865335
       Enemy2_Hit: 1127086547
       Elimination_01: 1754509420
       Enemy1_02: -668144207
+      RandomPU: 1876500062
       Balle: -363420891
       PlayerTopRight: -1350222069
       BalleEnemy: 763967865
       Leg_1: -1568560243
       Leg_2: 157797008
       Enemy1_Hit: -1437677082
-      Confusion: 1876500062
       RafalePU: 378637315
       Muted: 1127816948
       StartJeu: -446974790
@@ -882,7 +882,7 @@ TextureImporter:
       Shotgun: -1841752848
       ViePU: -1195659494
       Enemy2_01: 889660178
-      Hello: 1623411318
+      TitreDepart: 56384348
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
