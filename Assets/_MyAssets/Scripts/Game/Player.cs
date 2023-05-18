@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
         float inputHorizontal = Input.GetAxis("Fire1");
         float inputVertical = Input.GetAxis("Fire2");
 
+        GestionFireAnim(inputHorizontal, inputVertical);
         if (Time.time > _canfire)
         {
             _canfire = Time.time + _fireRate;
